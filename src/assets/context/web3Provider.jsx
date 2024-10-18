@@ -22,7 +22,12 @@ useEffect(()=>{
     window.ethereum.on('accountsChanged',handleAccountChange(setWeb3State))
     window.ethereum.on('chainChanged',handleChainChange(setWeb3State))
 
-})
+
+return()=>{
+    window.ethereum.removeListener('accountsChanged',()=>handleAccountChange(setWeb3State))
+    window.ethereum.removeListener('chainChanged',()=>handleChainChange(setWeb3State))
+}
+},[])
     return (
         <>
         <Web3Context.Provider value={web3State}>
