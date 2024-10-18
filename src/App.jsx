@@ -1,11 +1,14 @@
 
 import './App.css'
+import Web3Provider from './assets/context/web3Provider'
 
 function App() {
 
   return (
     <>
-     <Dummy></Dummy> 
+    <Web3Provider> <Dummy> 
+      </Dummy> </Web3Provider>
+    
     </>
   )
 }
