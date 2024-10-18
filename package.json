@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "start": "vite start",
-  "test": "vite test",
-  "eject": "vite eject",
+    "test": "vite test",
+    "eject": "vite eject",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "ethers": "^6.13.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "^3.0.1"
