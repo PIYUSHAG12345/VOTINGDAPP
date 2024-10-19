@@ -1,13 +1,13 @@
 
 import './App.css'
 import Web3Provider from './assets/context/web3Provider'
+import registerCandidate from './pages/Candidate/RegisterCandidate'
 
 function App() {
 
   return (
     <>
-    <Web3Provider> <Dummy> 
-      </Dummy> </Web3Provider>
+    <Web3Provider> <registerCandidate></registerCandidate></Web3Provider>
     
     </>
   )

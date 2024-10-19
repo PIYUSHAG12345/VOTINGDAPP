@@ -1,2 +1,3 @@
 import { createContext }  from "react";
-export const web3Context=createContext()
+const Web3Context = React.createContext();
+export default Web3Context;

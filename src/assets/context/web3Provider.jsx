@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Web3Context } from "./web3Context";
+
+import Web3Context from '/src/assets/context/web3Context.jsx';
 import { getWeb3State } from "../utils/getWeb3State";
 import { handleChainChange } from "../utils/handleAccountChange";
 import { handleAccountChange } from "../utils/handleChainChange";
