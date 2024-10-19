@@ -7,7 +7,7 @@ export const getWeb3State=async()=>{
     const accounts=await window.ethereum.request({
     "method":"eth_requestAccounts"
     })
-    const selectedAccoun=account(0);
+    const selectedAccount=accounts[0];
     const chainIdHex=await window.ethereum
 .request({
     "method":"eth_chainId"
@@ -15,13 +15,13 @@ export const getWeb3State=async()=>{
 const chainId=parseInt(chainIdHex,16);
 const provider=new ethers.BrowserProvider(window.ethereum)
 const signer=await provider.getSigner()
-const contractAddress=""
+const contractAddress="0xCCC15B5CCAF92d34f3A99c2270920D3Fcf42c290"
 const contractInstance= new ethers.Contract(contractAddress,abi,signer)
 return {contractInstance,selectedAccoun,chainId}
 
  } catch(error){
         console.log(error)
-        throw new Error
+        throw new Error("metamask is not installed")
     }
 
 }

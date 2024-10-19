@@ -1,8 +1,8 @@
 import {useRef} from "react";
 import { useWeb3Context } from "../../assets/context/useWeb3Context";
 const RegisterVoter=()=>{
-    const {contractInstance}=useWeb3Context()
-    const nameRef=useRef(null);
+    const {web3State} = useWeb3Context()
+    const {contractInstance} = web3State;    const nameRef=useRef(null);
     const genderRef=useRef(null);
     const partyRef=useRef(null);
     const ageRef=useRef(null);

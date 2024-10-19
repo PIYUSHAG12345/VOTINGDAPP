@@ -2,8 +2,8 @@ import { useEffect,useState } from "react";
 import { useWeb3Context } from "../../assets/context/useWeb3Context";
 export default function AnnounceWinner(){
     const {winner,setWinner}=useState()
-    const {contractInstance}=useWeb3Context()
-    const getWinner=async()=>{
+    const {web3State} = useWeb3Context()
+    const {contractInstance} = web3State;    const getWinner=async()=>{
         const winner=await contractInstance.announceVotingResult()
         console.log(winner)
         setWinner(winner)
