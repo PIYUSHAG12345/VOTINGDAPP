@@ -1,4 +1,5 @@
 import  {ethers}  from "ethers"
+import abi from "../constant/abi.json"
 export const getWeb3State=async()=>{
     try{
     if(!window.ethereum){
