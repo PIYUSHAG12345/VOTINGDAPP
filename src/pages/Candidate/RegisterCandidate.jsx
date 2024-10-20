@@ -1,7 +1,9 @@
 import {useRef} from "react";
 import { useWeb3Context } from "../../assets/context/useWeb3Context";
 import axios from "axios"
+import { uploadCandidateImage } from "../../assets/utils/uploadCandidateImage";
 const RegisterCandidate=()=>{
+    const [file,setFile]=web3State;
     const {contractInstance}=useWeb3Context()
     const nameRef=useRef(null);
     const genderRef=useRef(null);
@@ -32,6 +34,7 @@ const RegisterCandidate=()=>{
             <label>Party:<input type="text"ref={partyRef}></input></label>
             <button type="submit">Register</button>
         </form>
+        <input type="file" onChange={(e)=>setFile(e.file)}></input>
         </>
     )
 }
