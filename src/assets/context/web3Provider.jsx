@@ -4,13 +4,14 @@ import { getWeb3State } from "../utils/getWeb3State";
 import { handleAccountChange } from "../utils/handleAccountChange";
 import { handleChainChange } from "../utils/handleChainChange";
 import {toast} from "react-hot-toast"
+
 const Web3Provider = ({children})=>{
   const [web3State,setWeb3State]=useState({
     contractInstance:null,
     selectedAccount:null,
     chainId:null,
     signer:null,
-    prov
+    provider:null
   })
   const handleWallet = async()=>{
     try{

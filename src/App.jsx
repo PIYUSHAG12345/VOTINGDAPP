@@ -1,13 +1,17 @@
 
 import './App.css'
+import { routes } from './routes/routes'
 import Web3Provider from './assets/context/web3Provider'
-import registerCandidate from './pages/Candidate/RegisterCandidate'
+import { RouterProvider } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-    <Web3Provider> <registerCandidate></registerCandidate></Web3Provider>
+    <Web3Provider> 
+      <RouterProvider router={routes}>
+      </RouterProvider>
+    </Web3Provider>
     
     </>
   )
