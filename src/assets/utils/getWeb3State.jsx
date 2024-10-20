@@ -17,6 +17,14 @@ const chainId=parseInt(chainIdHex,16);
 const provider=new ethers.BrowserProvider(window.ethereum)
 const signer=await provider.getSigner()
 const contractAddress="0xCCC15B5CCAF92d34f3A99c2270920D3Fcf42c290"
+const message="welcome to voting app,you accept our terms and condition "
+const signature=await signer.signMessage(message);
+const dataSignature={
+    signature
+}
+const res=await axios.post(`http://localhost:5173/api/authentication?${selectedAccount}`,)
+console.log(res.data.token)
+//localStorage.set("token",res.data.token)
 const contractInstance= new ethers.Contract(contractAddress,abi,signer)
 return {contractInstance,selectedAccoun,chainId}
 
