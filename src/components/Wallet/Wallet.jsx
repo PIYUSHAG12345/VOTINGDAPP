@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useWeb3Context } from "../../assets/context/useWeb3Context";
 import { getWeb3State } from "../../assets/utils/getWeb3State";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-hot-toast"
 
 const Wallet=()=>{
 const {handleWallet,web3Start}= useWeb3Context()

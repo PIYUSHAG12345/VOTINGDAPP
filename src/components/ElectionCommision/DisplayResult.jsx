@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import { useWeb3Context } from '../../assets/context/useWeb3Context';
+import {toast} from "react-hot-toast"
 const DisplayResult = () => {
         
     const {web3State} = useWeb3Context()
@@ -15,6 +16,7 @@ const DisplayResult = () => {
             }
   
           }catch(error){
+            toast.error("Error: Getting Winner")
             console.error(error)
           }
         }
