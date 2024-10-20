@@ -1,5 +1,6 @@
 import {useRef} from "react";
 import { useWeb3Context } from "../../assets/context/useWeb3Context";
+import axios from "axios"
 const RegisterCandidate=()=>{
     const {contractInstance}=useWeb3Context()
     const nameRef=useRef(null);
