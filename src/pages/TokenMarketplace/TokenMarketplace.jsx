@@ -1,4 +1,4 @@
-import { useWeb3Context } from "../../context/useWeb3Context";
+import { useWeb3Context } from "../../assets/context/useWeb3Context";
 import { useEffect,useState } from "react";
 import { ethers } from "ethers";
 
@@ -7,8 +7,8 @@ import SellToken from "../../components/TokenMarketplace/SellToken";
 import TokenBalance from "../../components/TokenMarketplace/TokenBalance";
 import TokenPrice from "../../components/TokenMarketplace/TokenPrice";
 
-import tokenMarketplaceAbi from "../../constant/tokenMarketplaceAbi.json"
-import erc20abi from "../../constant/erc20Abi.json"
+import tokenMarketplaceAbi from "../../assets/constant/tokenMarketplaceAbi.json"
+import erc20abi from "../../assets/constant/erc20Abi.json"
 
 import {toast} from "react-hot-toast"
 

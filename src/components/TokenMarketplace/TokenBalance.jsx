@@ -1,7 +1,7 @@
 import {ethers}  from "ethers";
 
 import { useEffect,useState } from "react";
-import { useWeb3Context } from "../../context/useWeb3Context";
+import { useWeb3Context } from "../../assets/context/useWeb3Context";
 import {toast} from "react-hot-toast"
 const TokenBalance = ({erc20ContractInstance}) => {
     const {web3State}=useWeb3Context()
