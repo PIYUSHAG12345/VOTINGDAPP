@@ -7,42 +7,48 @@ import ElectionCommision from "../pages/ElectionCommision/ElectionCommision";
 import Wallet from "../components/Wallet/Wallet";
 import Navigation from "../components/Navigation/Navigation";
 import TokenExchange from "../pages/TokenMarketplace/TokenMarketplace"
+
 export const routes = createBrowserRouter([
     {path:'/',element:(
-        <div>
-            <Wallet/>
-        </div>
-    )
-        },
+    <div>
+      <Wallet/>
+    </div>
+    )},
     {path:'register-voter',element:(
         <div>
-            <Navigation/>
-            < RegisterVoter/>
+          <Navigation/>
+          <RegisterVoter/>
         </div>
-    )},
+        )},
     {path:'register-candidate',element:(
         <div>
-            <Navigation/>
-            <RegisterCandidate/>
+          <Navigation/>
+          <RegisterCandidate/>
         </div>
-    )},
+        )},
     {path:'voter-list',element:(
         <div>
-            <Navigation/>
-            <GetVoterList/>
+          <Navigation/>
+          <GetVoterList/>
         </div>
-    )},
+        )},
     {path:'candidate-list',element:(
         <div>
-            <Navigation/>
-            <GetCandidateList/>
+          <Navigation/>
+          <GetCandidateList/>
         </div>
-    )},
+        )},
     {path:'election-commision',element:(
         <div>
-            <Navigation/>
-            <ElectionCommision/>
+          <Navigation/>
+          <ElectionCommision/>
         </div>
-    )},
+        )},
+    {path:"/token-marketplace",element:(
+          <div>
+              <Navigation/>
+              <TokenExchange/>
+          </div>
+      )},
 
 ])

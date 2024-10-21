@@ -31,9 +31,9 @@ export const getWeb3State = async () => {
     // Contract information
     const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
     const message = "Welcome to Voting App. You accept our terms and conditions.";
-    
+    let signature;
     try {
-      const signature = await signer.signMessage(message);
+      signature = await signer.signMessage(message);
       toast.success("Signature generated for authentication.");
       console.log("Signature: ", signature); // Useful for debugging or logging
     } catch (error) {
@@ -43,7 +43,7 @@ export const getWeb3State = async () => {
     
     // Send authentication request with axios
     const dataSignature = { signature };
-    const res = await axios.post(`http://localhost:5173/api/authentication`, {
+    const res = await axios.post(`http://localhost:5174/api/authentication`, {
       selectedAccount,
       signature: dataSignature.signature,
     });
