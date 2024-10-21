@@ -29,13 +29,18 @@ export const getWeb3State = async () => {
     const signer = await provider.getSigner();
 
     // Contract information
-    const contractAddress = "0x83A8cB9f282DD6763bca9c4bcf7977a4f5C77aB5";
+    const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
     const message = "Welcome to Voting App. You accept our terms and conditions.";
     
-    // Sign a message with the signer
-    const signature = await signer.signMessage(message);
-    toast("Signature generated for authentication.");
-
+    try {
+      const signature = await signer.signMessage(message);
+      toast.success("Signature generated for authentication.");
+      console.log("Signature: ", signature); // Useful for debugging or logging
+    } catch (error) {
+      toast.error("Signature not generated. Please try again.");
+      console.error("Error during message signing:", error); // Logs the error for debugging
+    }
+    
     // Send authentication request with axios
     const dataSignature = { signature };
     const res = await axios.post(`http://localhost:5173/api/authentication`, {
