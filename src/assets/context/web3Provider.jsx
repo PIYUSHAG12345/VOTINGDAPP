@@ -15,10 +15,10 @@ const Web3Provider = ({children})=>{
   })
   const handleWallet = async()=>{
     try{
-        const {contractInstance,selectedAccount,chainId} = await getWeb3State();
-        setWeb3State({contractInstance,selectedAccount,chainId})
+        const {contractInstance,selectedAccount,chainId,signer,provider} = await getWeb3State();
+        setWeb3State({contractInstance,selectedAccount,chainId,signer,provider});
     }catch(error){
-        console.error(error)
+        console.error("this is the error")
     }
   }
   useEffect(()=>{

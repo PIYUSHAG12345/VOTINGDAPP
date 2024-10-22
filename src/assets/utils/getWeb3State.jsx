@@ -29,7 +29,7 @@ export const getWeb3State = async () => {
     const signer = await provider.getSigner();
 
     // Contract information
-    const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+    const contractAddress = "0xF7944A4969050BE982709F1F9268C15f3acf5Cd8";
     const message = "Welcome to Voting App. You accept our terms and conditions.";
     let signature;
     try {
