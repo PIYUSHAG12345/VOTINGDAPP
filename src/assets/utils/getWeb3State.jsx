@@ -43,7 +43,7 @@ export const getWeb3State = async () => {
     
     // Send authentication request with axios
     const dataSignature = { signature };
-    const res = await axios.post(`http://localhost:5174/api/authentication`, {
+    const res = await axios.post(`http://localhost:5173/api/authentication`, {
       selectedAccount,
       signature: dataSignature.signature,
     });
